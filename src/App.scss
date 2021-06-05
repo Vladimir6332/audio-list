@@ -1,0 +1,24 @@
+@import 'styles/abstract/constants';
+@import 'assets/fonts/font/stylesheet.css';
+@import 'styles/abstract/mixins';
+@import 'styles/base/base';
+
+#root {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.app-wrapper {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.app {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 0 auto;
+  padding: 0.5vh 1vw;
+}

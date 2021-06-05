@@ -1,0 +1,74 @@
+@import 'styles/abstract/constants';
+
+.logo,
+.logo__link {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.logo__link {
+  text-decoration: none;
+}
+
+.logo__picture {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  fill: white;
+}
+
+#svg2 {
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  position: absolute;
+
+  &_1 {
+    animation: rotate-move-right 6s linear infinite;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &_2 {
+    animation: rotate-move-left 4.5s linear infinite;
+    width: 2.1rem;
+    height: 2.1rem;
+    top: 2.35rem;
+    left: 1.95rem;
+  }
+}
+
+.logo__title {
+  text-transform: uppercase;
+  margin: 0 2rem;
+
+  cursor: pointer;
+}
+
+.logo:hover {
+  .logo__title {
+    color: white;
+  }
+}
+
+@keyframes rotate-move-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-move-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
