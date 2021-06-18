@@ -1,3 +1,4 @@
+@import 'normalize.css/normalize.css';
 @import 'styles/abstract/constants';
 @import 'assets/fonts/font/stylesheet.css';
 @import 'styles/abstract/mixins';
@@ -8,7 +9,7 @@
   height: 100%;
 }
 
-.app-wrapper {
+.wrapper {
   box-sizing: border-box;
   height: 100%;
   display: flex;

@@ -1,0 +1,80 @@
+@import 'styles/abstract/constants';
+@import 'styles/abstract/mixins';
+
+.search {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 2px $color-background2 solid;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background2;
+}
+
+.search__button {
+  display: flex;
+  width: 3rem;
+  height: 100%;
+  padding: none;
+  border: none;
+  background-color: $color-background1;
+  cursor: pointer;
+
+  &:hover {
+    fill: rgb(160, 0, 0);
+  }
+}
+
+.search__input {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  outline: none;
+
+  background-color: $color-background2;
+  @include font($size: 1.6rem, $height: 2rem, $weight: 400);
+  color: $color-text;
+}
+
+.search__icon {
+  height: 100%;
+}
+
+.keyboard-container {
+  position: absolute;
+
+  width: 100%;
+  height: 200px;
+  top: 3rem;
+  background-color: pink;
+  z-index: 10000;
+}
+
+.keyboard__button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 3.5rem;
+  height: 100%;
+  padding: none;
+  border: none;
+  background-color: $color-background1;
+  cursor: pointer;
+  fill: $color-text;
+
+  &:hover {
+    fill: rgb(160, 0, 0);
+  }
+}
+
+.keyboard__icon {
+  height: 100%;
+}
