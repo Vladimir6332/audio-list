@@ -1,9 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import queryReducer from './reducers/queryReducer';
+import query from './reducers/queryReducer';
 
-let reducers = combineReducers({ queryReducer });
+let rootReducer = combineReducers({ query });
 
-let store = createStore(reducers, applyMiddleware(thunk));
+export type rootStateType = ReturnType<typeof rootReducer>;
+
+let store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 export default store;

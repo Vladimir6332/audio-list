@@ -3,7 +3,7 @@ export enum QueryActionTypes {
 }
 
 export interface QueryState {
-  query: string;
+  value: string;
   request: any;
 }
 

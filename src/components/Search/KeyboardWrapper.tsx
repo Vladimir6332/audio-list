@@ -5,11 +5,13 @@ import 'react-simple-keyboard/build/css/index.css';
 interface IProps {
   onChange: (input: string) => void;
   keyboardRef: MutableRefObject<typeof Keyboard>;
+  defaultValue: string;
 }
 
 const KeyboardWrapper: FunctionComponent<IProps> = ({
   onChange,
   keyboardRef,
+  defaultValue,
 }) => {
   const [layoutName, setLayoutName] = useState('default');
 
@@ -25,7 +27,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
       layoutName={layoutName}
       onChange={onChange}
       onKeyPress={onKeyPress}
-      onRender={() => console.log('Rendered')}
+      onInit={(keyboard: any) => keyboard.setInput(defaultValue)}
     />
   );
 };
